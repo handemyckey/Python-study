@@ -12,8 +12,6 @@ print(my_list)
 print(id(my_list))
 print("\n\n")
 
-
-my_list = [1,2,3,4]
 print(type(my_list))
 
 print(id(my_list))

@@ -29,5 +29,6 @@ def encode(digits,digit_map):
     for d in digits:
         encoding += digit_map[d]
     print(encoding)
-
 encode([15,15],'0123456789ABCDEF')
+
+

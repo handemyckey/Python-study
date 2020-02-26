@@ -89,17 +89,19 @@ def membership_test(n, container):
         if 'x' in container:
             pass
 
-
+#time required for execution of list
 start = time.perf_counter()
 membership_test(10000000, char_list)
 end = time.perf_counter()
 print("List:", end-start)
 
+#time required for execution of tuple
 start_1 = time.perf_counter()
 membership_test(10000000, char_tuple)
 end_1 = time.perf_counter()
 print("tuple:", end_1-start_1)
 
+#time required for execution of set
 start_2 = time.perf_counter()
 membership_test(10000000, char_set)
 end_2 = time.perf_counter()

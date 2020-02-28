@@ -51,3 +51,14 @@ fib_iter = FibIterr(7)
 
 
 
+def fib(n):
+    fib_0 = 1
+    fib_1 = 1
+    for i in range(n-1):
+        fib_0, fib_1 = fib_1, fib_0 + fib_1
+        yield fib_1
+
+gen = fib(7)
+for num in gen:
+    print(num)
+

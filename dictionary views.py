@@ -39,6 +39,7 @@ d2 = {'a':10,'b':20,'c':30,'d':40}
 union = d1.keys() | d2.keys()
 intersection = d1.keys() & d2.keys()
 keys = union - intersection
+
 results = {}
 for key in keys:
     results[keys] = d1.get(key) or d2.get(key)

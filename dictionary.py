@@ -76,21 +76,37 @@ for cat in categories:
 
 
 
-def cat_key(c):
-    if c == '':
-        print("None")
-    elif c in string.ascii_lowercase:
-        print("Lower")
-    elif c in string.ascii_uppercase:
-        print("Upper")
-    else:
-        print("Other")
+# def cat_key(c):
+#     if c == '':
+#         print("None")
+#     elif c in string.ascii_lowercase:
+#         print("Lower")
+#     elif c in string.ascii_uppercase:
+#         print("Upper")
+#     else:
+#         print("Other")
+#
+# categories = {}
+# for c in text:
+#     key = cat_key(c)
+#     if key:
+#         categories.setdefault(key,set()).add(c)
+#
+#     for cat in categories:
+#         print(f'{cat}:',''.join(categories[cat]))
 
-categories = {}
-for c in text:
-    key = cat_key(c)
-    if key:
-        categories.setdefault(key,set()).add(c)
+from itertools import chain
+def vat_key(c):
+    cat_1 = {'': None}
+    cat_2 = dict.fromkeys(string.ascii_lowercase, 'Lower')
+    cat_3 = dict.fromkeys(string.ascii_uppercase, 'upper')
+    categories = dict(chain(cat_1.items(),cat_2.items(),cat_3.items()))
+    #categories = {**cat_1,**cat_2,**cat_3}
+    print(categories.get(c, 'other'))
 
-    for cat in categories:
-        print(f'{cat}:',''.join(categories[cat]))
+vat_key('a'), vat_key('A'), vat_key(':'),vat_key('')
+
+print(d)
+d.clear()
+print(d)
+

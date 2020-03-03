@@ -55,4 +55,9 @@ print(conf)
 def my_func(*,kw1,kw2,kw3):
     print(kw1,kw2,kw3)
 d = {'kw2':20,'kw1':10,'kw3':10}
-my_func(**d  )
+my_func(**d)
+d = {'a':[1,2],'b':[3,4]}
+d1 = d.copy()
+print(d1)
+print(d is d1)
+print(id(d),id(d1))

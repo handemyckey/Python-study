@@ -76,24 +76,24 @@ for cat in categories:
 
 
 
-# def cat_key(c):
-#     if c == '':
-#         print("None")
-#     elif c in string.ascii_lowercase:
-#         print("Lower")
-#     elif c in string.ascii_uppercase:
-#         print("Upper")
-#     else:
-#         print("Other")
-#
-# categories = {}
-# for c in text:
-#     key = cat_key(c)
-#     if key:
-#         categories.setdefault(key,set()).add(c)
-#
-#     for cat in categories:
-#         print(f'{cat}:',''.join(categories[cat]))
+def cat_key(c):
+    if c == '':
+        print("None")
+    elif c in string.ascii_lowercase:
+        print("Lower")
+    elif c in string.ascii_uppercase:
+        print("Upper")
+    else:
+        print("Other")
+
+categories = {}
+for c in text:
+    key = cat_key(c)
+    if key:
+        categories.setdefault(key,set()).add(c)
+
+    for cat in categories:
+        print(f'{cat}:',''.join(categories[cat]))
 
 from itertools import chain
 def vat_key(c):

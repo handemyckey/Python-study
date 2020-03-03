@@ -33,14 +33,19 @@ print(new_dict)
 print(d1.keys() ^ d2.keys())
 
 
-d1 = {'a':1,'b':2,'c':3,'d':4}
-d2 = {'a':10,'b':20,'c':30,'d':40}
+# d1 = {'a':1,'b':2,'c':3,'d':4}
+# d2 = {'a':10,'b':20,'c':30,'e':5}
+#
+# union = d1.keys() | d2.keys()
+# intersection = d1.keys() & d2.keys()
+# keys = union - intersection
+#
+# results = {}
+# for key in keys:
+#     results[keys] = d1.get(key) or d2.get(key)
+# print(results)
 
-union = d1.keys() | d2.keys()
-intersection = d1.keys() & d2.keys()
-keys = union - intersection
 
-results = {}
-for key in keys:
-    results[keys] = d1.get(key) or d2.get(key)
-print(results)
+res = {}
+res = {key: d1.get(key) or d2.get(key) for key in d1.keys() ^ d2.keys()}
+print(res)
